@@ -1,10 +1,18 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	font-family: sans-serif;
-	font-size: 14px;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-height: 100vh;
 }
 
 /* ---------------------------------------------------- */
@@ -15,3 +23,106 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+/* ----- main ---- */
+main {
+  margin: auto;
+  max-width: 540px;
+}
+
+/* tablet */
+@media only screen and (min-width: 540px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 960px;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 960px) {
+  main {
+    max-width: 100%;
+  }
+}
+
+/* ---- header one ---- */
+h1 {
+  text-align: center;
+}
+
+/* ---- contacts section ---- */
+.contacts {
+  margin: auto;
+  text-align: center;
+}
+
+/* tablet */
+@media only screen and (min-width: 540px) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 960px) {
+  .contacts {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+/* ---- contact card ----*/
+.contact-card {
+  padding: 30px;
+  margin: 30px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #9ec2e6, -2px -2px 5px #9ec2e6;
+}
+
+/* tablet */
+@media only screen and (min-width: 540px) {
+  .contact-card {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 960px) {
+  .contact-card {
+    display: block;
+    margin: 15px;
+  }
+}
+
+/* ---- contact card content ----*/
+
+.contact-profile-photo {
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 540px) {
+  .contact-card-text {
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .contact-card-text {
+    text-align: center;
+    padding: 0;
+  }
+}
