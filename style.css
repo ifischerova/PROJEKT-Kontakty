@@ -52,27 +52,28 @@ h1 {
   text-align: center;
 }
 
+/* ---- contact-row ----*/
+
+/* tablet */
+@media only screen and (min-width: 540px) {
+  .contact-row {
+    display: flex;
+    flex-direction: row;
+    /* all items should be the same width */
+    flex: 1;
+  }
+}
+
 /* ---- contacts section ---- */
 .contacts {
   margin: auto;
   text-align: center;
 }
 
-/* tablet */
-@media only screen and (min-width: 540px) {
-  .contacts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-  }
-}
-
 /* desktop */
 @media only screen and (min-width: 960px) {
   .contacts {
     display: flex;
-    flex-grow: 1;
   }
 }
 
@@ -88,14 +89,15 @@ h1 {
 @media only screen and (min-width: 540px) {
   .contact-card {
     display: flex;
-    flex-grow: 1;
+    /* all items should be the same width */
+    flex: 1;
   }
 }
 
 /* desktop */
 @media only screen and (min-width: 960px) {
   .contact-card {
-    display: block;
+    flex-direction: column;
     margin: 15px;
   }
 }
@@ -126,3 +128,4 @@ h1 {
     padding: 0;
   }
 }
+
