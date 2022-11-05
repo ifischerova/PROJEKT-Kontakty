@@ -79,8 +79,8 @@ h1 {
 
 /* ---- contact card ----*/
 .contact-card {
-  padding: 30px;
-  margin: 30px;
+  padding: 20px;
+  margin: 20px;
   border-radius: 20px;
   box-shadow: 2px 2px 5px #9ec2e6, -2px -2px 5px #9ec2e6;
 }
@@ -108,6 +108,7 @@ h1 {
   display: block;
   border-radius: 50%;
   margin: auto;
+  max-width: 40%;
 }
 
 .contact-card-text {
